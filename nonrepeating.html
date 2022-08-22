@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>non-Repeating character</title>
+</head>
+<body>
+    <script>
+        var s="Leetcode"
+        document.write(repeat(s))
+
+        function repeat(s){
+            const hashMap={};
+        for(let i=0;i<s.length;i++){
+            hashMap[s.charAt(i)]=hashMap[s.charAt(i)]+1||1;
+        }
+        for(let j=0;j<s.length;j++){
+            if(hashMap[s.charAt(j)]==1){
+                return j;
+            }
+        }
+        return -1;
+    }
+        
+    </script>
+</body>
+</html>
